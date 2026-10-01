@@ -5,7 +5,8 @@
   "plugins": [
     {
       "name": "ignite",
-      "source": ".",
+      "displayName": "Ignite",
+      "source": "./ignite",
       "description": "Assistente dos workshops Ignite da rvrt: conduz cada participante do primeiro contato à verificação do projeto."
     }
   ]
