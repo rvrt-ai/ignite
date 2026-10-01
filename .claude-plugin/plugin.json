@@ -1,0 +1,8 @@
+{
+  "name": "ignite",
+  "version": "2.1.0",
+  "description": "Assistente dos workshops Ignite da rvrt: conduz cada participante do primeiro contato à verificação do projeto, com dicas, explicações de conceito e a apresentação do resultado.",
+  "author": {
+    "name": "rvrt"
+  }
+}

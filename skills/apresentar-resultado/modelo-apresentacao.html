@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[Título] · [Nome]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--noite:#0A0B0A;--tinta:#171813;--papel:#EDEDEA;--papel2:#F6F5F1;--creme:#F4F1EA;--verde:#9BB54A;--verde-esc:#7E9836;--verde-claro:#E4EAD3;--cinza:#6C6E64;--cinza2:#8E9087;--linha:#D0CFC8;--texto2:#44463E}
+html{scroll-snap-type:y mandatory;background:var(--noite)}
+body{font-family:'Space Grotesk',-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--tinta);-webkit-font-smoothing:antialiased}
+.slide{height:100vh;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;background:var(--noite)}
+.frame{width:min(100vw,177.78vh);aspect-ratio:16/9;container-type:inline-size;position:relative;overflow:hidden;display:flex;flex-direction:column;padding:5.2cqw 6.2cqw 4cqw}
+.claro .frame{background:var(--papel);color:var(--tinta)}
+.escuro .frame{background:var(--noite);color:var(--creme)}
+.rotulo{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:1.3cqw;color:var(--cinza);letter-spacing:.02em}
+.rotulo b{color:var(--verde-esc);font-weight:500}
+.escuro .rotulo{color:var(--cinza2)}.escuro .rotulo b{color:var(--verde)}
+h1{font-size:6.4cqw;font-weight:700;letter-spacing:-.035em;line-height:1.02}
+h2{font-size:3.7cqw;font-weight:700;letter-spacing:-.02em;line-height:1.08;margin-top:1.6cqw;max-width:80cqw}
+.ponto{color:var(--verde)}
+.sub{font-size:1.9cqw;color:var(--texto2);line-height:1.4;margin-top:1.6cqw;max-width:70cqw}
+.escuro .sub{color:#B7B6AD}
+.rodape{position:absolute;left:6.2cqw;right:6.2cqw;bottom:2.6cqw;display:flex;justify-content:space-between;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1cqw;color:var(--cinza2)}
+.logo{font-weight:700;letter-spacing:-.05em;line-height:1}.logo span{color:var(--verde)}
+.capa .frame{justify-content:center}
+.capa .logo{font-size:3cqw;position:absolute;top:5.2cqw;left:6.2cqw}
+.capa .quem{margin-top:3cqw;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.4cqw;color:var(--cinza2)}
+.numero-grande{font-size:12cqw;font-weight:700;letter-spacing:-.05em;line-height:.95;margin-top:auto}
+.numero-grande small{font-size:3cqw;font-weight:500;letter-spacing:-.01em;color:var(--cinza);margin-left:1cqw}
+.escuro .numero-grande small{color:var(--cinza2)}
+.nota{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.15cqw;color:var(--cinza);margin-top:1.2cqw}
+.escuro .nota{color:var(--cinza2)}
+.grade{display:grid;gap:1.6cqw;margin-top:auto}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.cartao{border-top:.18cqw solid var(--tinta);padding-top:1.1cqw}
+.escuro .cartao{border-top-color:var(--creme)}
+.cartao .t{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.05cqw;color:var(--cinza);letter-spacing:.08em;text-transform:uppercase}
+.cartao .v{font-size:1.75cqw;font-weight:500;line-height:1.35;margin-top:.6cqw}
+.destaque{background:var(--tinta);color:var(--creme);padding:1.8cqw 2.2cqw;margin-top:2cqw}
+.destaque .t{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.05cqw;color:var(--verde);letter-spacing:.08em;text-transform:uppercase}
+.destaque .v{font-size:2.2cqw;font-weight:500;margin-top:.5cqw;line-height:1.3}
+.etapas{list-style:none;display:grid;gap:1cqw;margin-top:auto}
+.etapas li{display:grid;grid-template-columns:3.6cqw 1fr auto;align-items:baseline;border-bottom:1px solid var(--linha);padding-bottom:.9cqw;font-size:1.75cqw;font-weight:500}
+.etapas .n{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.3cqw;color:var(--verde-esc)}
+.etapas .tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.05cqw;color:var(--cinza)}
+table.mapa{width:100%;border-collapse:collapse;margin-top:auto;font-size:1.45cqw;background:var(--papel2);border:1px solid var(--tinta)}
+table.mapa th{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1cqw;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);text-align:left;padding:.9cqw 1.2cqw;border-bottom:1px solid var(--tinta)}
+table.mapa td{padding:.9cqw 1.2cqw;border-bottom:1px solid var(--linha)}
+table.mapa tr.melhor td{background:var(--verde-claro);font-weight:700}
+table.mapa td.num{text-align:right;font-variant-numeric:tabular-nums}
+.barras{margin-top:auto;display:grid;gap:2cqw}
+.barra .t{display:flex;justify-content:space-between;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.2cqw;color:var(--cinza2);margin-bottom:.7cqw}
+.barra .trilho{height:4.2cqw;background:#1D1F1A}
+.barra .enche{height:100%;background:#44463E}
+.barra.depois .enche{background:var(--verde)}
+.barra .rotulo-v{font-size:3.2cqw;font-weight:700;letter-spacing:-.03em;color:var(--creme)}
+.status{list-style:none;margin-top:auto;display:grid;gap:1cqw}
+.status li{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--linha);padding-bottom:.9cqw;font-size:1.7cqw;font-weight:500}
+.selo{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:1.05cqw;padding:.3cqw .8cqw;border:1px solid var(--tinta)}
+.selo.ok{background:var(--tinta);color:var(--verde)}
+.selo.parcial{background:transparent;color:var(--tinta)}
+.fecho .frame{justify-content:center;align-items:flex-start}
+.fecho .logo{font-size:9cqw}
+@media print{@page{size:1600px 900px;margin:0}html{scroll-snap-type:none;background:none}.slide{height:auto;page-break-after:always;background:none}.frame{width:1600px}}
+</style></head><body>
+<!--
+  MODELO VISUAL RVRT · apresentação do resultado
+  Como usar:
+  1. Copie este arquivo inteiro para ignite/apresentacao.html.
+  2. NÃO mude o <style>. Troque só o texto entre colchetes [ ].
+  3. Um ponto por slide. Se um slide não tiver conteúdo real, apague o slide inteiro.
+  4. Todo número vem de ignite/planejamento.md. Marque "medido" ou "estimado" na nota.
+  5. Classes úteis: "escuro" ou "claro" no <section>; grade g2/g3/g4; cartao; destaque;
+     numero-grande; etapas; table.mapa (tr.melhor destaca uma linha); barras; status (selo ok / selo parcial).
+-->
+
+<!-- SLIDE · CAPA (escuro) -->
+<section class="slide escuro capa"><div class="frame">
+  <div class="logo">rvrt<span>_</span></div>
+  <div class="rotulo"><b>//</b> workshop ignite · resultado do projeto</div>
+  <h1 style="margin-top:1.6cqw">[Título curto do resultado]<span class="ponto">.</span></h1>
+  <div class="quem">[Nome] · [Área] · [Empresa]</div>
+</div></section>
+
+<!-- SLIDE · A DOR E O NÚMERO DE ANTES (claro) · fonte: seção 1 -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 01 · a dor</div>
+  <h2>[A dor em uma frase, com o custo de hoje.]</h2>
+  <p class="sub">[Como é feito hoje, em até duas frases.]</p>
+  <div class="numero-grande">[número]<small>[unidade]</small></div>
+  <div class="nota">antes · [medido ou estimado: como foi obtido] · [frequência]</div>
+</div></section>
+
+<!-- SLIDE · O QUE PLANEJAMOS (claro) · fonte: seção 2 -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 02 · o que planejamos</div>
+  <h2>[O resultado planejado, em uma frase.]</h2>
+  <div class="grade g3" style="margin-top:auto">
+    <div class="cartao"><div class="t">Resultado</div><div class="v">[...]</div></div>
+    <div class="cartao"><div class="t">Regras</div><div class="v">[...]</div></div>
+    <div class="cartao"><div class="t">Fica de fora</div><div class="v">[...]</div></div>
+  </div>
+  <div class="destaque"><div class="t">Deu certo se</div><div class="v">[critério com número]</div></div>
+</div></section>
+
+<!-- SLIDE · COMO FIZEMOS (claro) · fonte: seções 3 e 4 -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 03 · como fizemos</div>
+  <h2>[Caminho escolhido], em [N] etapas pequenas.</h2>
+  <ol class="etapas">
+    <li><span class="n">01</span>[Etapa 1]<span class="tag">feito</span></li>
+    <li><span class="n">02</span>[Etapa 2]<span class="tag">⏸ revisado</span></li>
+    <!-- uma linha por etapa da seção 4 -->
+  </ol>
+</div></section>
+
+<!-- SLIDE · O QUE FOI FEITO (claro) · exemplo REAL do que foi produzido -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 04 · o que foi feito</div>
+  <h2>[Um caso real, em uma frase.]</h2>
+  <table class="mapa">
+    <tr><th>[coluna]</th><th>[coluna]</th><th>[coluna]</th></tr>
+    <tr class="melhor"><td>[...]</td><td class="num">[...]</td><td>[...]</td></tr>
+    <tr><td>[...]</td><td class="num">[...]</td><td>[...]</td></tr>
+  </table>
+  <div class="nota">[O que este exemplo mostra, em uma frase.]</div>
+</div></section>
+
+<!-- SLIDE · ANTES E DEPOIS (escuro) · fonte: seção 5. Largura da barra "depois" = depois ÷ antes × 100% -->
+<section class="slide escuro"><div class="frame">
+  <div class="rotulo"><b>//</b> 05 · antes e depois</div>
+  <h2>O mesmo trabalho, medido do mesmo jeito.</h2>
+  <div class="barras">
+    <div class="barra"><div class="t"><span>ANTES · [como]</span><span>[medido/estimado]</span></div><div class="trilho"><div class="enche" style="width:100%;display:flex;align-items:center;padding-left:1.4cqw"><span class="rotulo-v">[antes]</span></div></div></div>
+    <div class="barra depois"><div class="t"><span>DEPOIS · [como]</span><span>[medido/estimado]</span></div><div class="trilho"><div class="enche" style="width:[X]%;display:flex;align-items:center;padding-left:1.4cqw"><span class="rotulo-v" style="color:#0A0B0A">[depois]</span></div></div></div>
+  </div>
+</div></section>
+
+<!-- SLIDE · GANHO MEDIDO (escuro) · fonte: seção 5 -->
+<section class="slide escuro"><div class="frame">
+  <div class="rotulo"><b>//</b> 06 · ganho medido</div>
+  <h2>[O ganho, em uma frase.]</h2>
+  <div class="numero-grande" style="color:#F4F1EA">[ganho]<small>[unidade]</small></div>
+  <div class="nota">[a conta] · [o que é medido e o que é estimado]</div>
+</div></section>
+
+<!-- SLIDE · VERIFICAÇÃO (claro) · fonte: seção 5 -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 07 · verificação</div>
+  <h2>Contra o planejado, item por item.</h2>
+  <ul class="status">
+    <li>[item]<span class="selo ok">atendido</span></li>
+    <li>[item]<span class="selo parcial">parcial</span></li>
+  </ul>
+</div></section>
+
+<!-- SLIDE · PRÓXIMOS PASSOS (claro) · fonte: "Segunda versão" -->
+<section class="slide claro"><div class="frame">
+  <div class="rotulo"><b>//</b> 08 · próximos passos</div>
+  <h2>[O próximo passo principal.]</h2>
+  <div class="grade g3">
+    <div class="cartao"><div class="t">Hoje</div><div class="v">[...]</div></div>
+    <div class="cartao"><div class="t">Próximo</div><div class="v">[...]</div></div>
+    <div class="cartao"><div class="t">Depois</div><div class="v">[...]</div></div>
+  </div>
+</div></section>
+
+<!-- SLIDE · FECHO (escuro) -->
+<section class="slide escuro fecho"><div class="frame">
+  <div class="rotulo"><b>//</b> obrigado</div>
+  <div class="logo" style="margin-top:2cqw">rvrt<span>_</span></div>
+  <p class="sub" style="margin-top:2cqw">[Nome] · workshop Ignite da rvrt</p>
+</div></section>
+</body></html>

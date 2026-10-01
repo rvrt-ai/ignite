@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para ir além · [Nome]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--noite:#0A0B0A;--tinta:#171813;--papel:#EDEDEA;--papel2:#F6F5F1;--creme:#F4F1EA;--verde:#9BB54A;--verde-esc:#7E9836;--verde-claro:#E4EAD3;--cinza:#6C6E64;--cinza2:#8E9087;--linha:#D0CFC8;--texto2:#44463E}
+body{font-family:'Space Grotesk',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--papel);color:var(--tinta);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
+.topo{background:var(--noite);color:var(--creme);padding:56px 0 64px}
+.miolo{max-width:1120px;margin:0 auto;padding:0 40px}
+.logo{font-weight:700;font-size:30px;letter-spacing:-.05em;line-height:1}.logo span{color:var(--verde)}
+.rotulo{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:var(--cinza)}
+.rotulo b{color:var(--verde-esc);font-weight:500}
+.topo .rotulo{color:var(--cinza2);margin-top:56px}.topo .rotulo b{color:var(--verde)}
+h1{font-size:64px;font-weight:700;letter-spacing:-.035em;line-height:1.02;margin-top:14px}
+.ponto{color:var(--verde)}
+.topo .sub{font-size:19px;color:#B7B6AD;max-width:720px;margin-top:18px}
+.quem{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:var(--cinza2);margin-top:28px}
+.destaques{background:var(--tinta);color:var(--creme);padding:48px 0 56px}
+.destaques h2{font-size:30px;letter-spacing:-.02em;margin-top:10px}
+.destaques .rotulo{color:var(--cinza2)}.destaques .rotulo b{color:var(--verde)}
+.grade-d{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:28px}
+.d{border-top:2px solid var(--verde);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.d .n{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.d .porque{font-size:15.5px;color:#D0CFC8}
+.d a.ir{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12.5px;color:var(--verde);text-decoration:none;margin-top:auto}
+.d a.ir:hover{text-decoration:underline}
+.indice{display:flex;flex-wrap:wrap;gap:8px;margin:40px 0 8px}
+.indice a{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12.5px;text-decoration:none;border:1px solid var(--tinta);padding:6px 12px;background:var(--papel2)}
+.indice a:hover{background:var(--tinta);color:var(--creme)}
+.cat{padding:40px 0 8px}
+.cat h2{font-size:32px;letter-spacing:-.02em;margin-top:8px}
+.cat .desc{color:var(--texto2);margin-top:6px;max-width:760px}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:22px}
+.item{background:var(--papel2);border:1px solid var(--linha);padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.item.marcado{border-color:var(--verde-esc);box-shadow:inset 4px 0 0 var(--verde)}
+.item .cab{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.item .n{font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.item .autor{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--cinza)}
+.item .o{font-size:15px}
+.item .campo{font-size:14px;color:var(--texto2)}
+.item .campo b{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);font-weight:500;margin-right:6px}
+.nivel{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;padding:3px 8px;white-space:nowrap;border:1px solid var(--tinta)}
+.nivel.comecando{background:var(--verde-claro);border-color:var(--verde-esc);color:#3F4A1B}
+.nivel.intermediario{background:var(--papel);}
+.nivel.tecnico{background:var(--tinta);color:var(--creme)}
+.item a.ir{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12.5px;color:var(--verde-esc);margin-top:auto;padding-top:6px;word-break:break-all}
+.rodape{margin-top:56px;background:var(--noite);color:var(--cinza2);padding:36px 0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12.5px}
+.rodape .logo{font-size:22px;color:var(--creme);margin-bottom:10px}
+@media(max-width:700px){h1{font-size:42px}.miolo{padding:0 20px}}
+@media print{.topo,.destaques,.rodape{-webkit-print-color-adjust:exact;print-color-adjust:exact}.item{break-inside:avoid}}
+</style></head><body>
+<!--
+  MODELO DA PÁGINA DE REFERÊNCIAS RVRT
+  1. Copie este arquivo inteiro para ignite/referencias.html.
+  2. NÃO mude o <style> nem a lista completa (ela foi gerada a partir de referencias.md).
+  3. Troque o texto entre colchetes [ ] do topo e dos destaques.
+  4. Um bloco <div class="d"> por destaque, de 3 a 5. O link do destaque é o mesmo do item na lista.
+  5. Nos itens destacados da lista, troque class="item" por class="item marcado".
+-->
+<header class="topo"><div class="miolo"><div class="logo">rvrt<span>_</span></div>
+<div class="rotulo"><b>//</b> workshop ignite · para ir além</div>
+<h1>Para ir além<span class="ponto">.</span></h1>
+<p class="sub">[Uma frase: para que serve esta página, ligada ao projeto da pessoa.]</p>
+<div class="quem">[Nome] · [Área] · [Projeto em poucas palavras]</div></div></header>
+<section class="destaques"><div class="miolo"><div class="rotulo"><b>//</b> escolhidas para você</div>
+<h2>[Comece por estas.]</h2>
+<div class="grade-d">
+  <div class="d"><span class="rotulo">[categoria] · [nível]</span><div class="n">[Nome da referência]</div><p class="porque">[Por que combina com a área ou o projeto da pessoa, em uma frase.]</p><a class="ir" href="[link]" target="_blank" rel="noopener">abrir ↗</a></div>
+  <!-- repita o bloco acima para cada destaque, de 3 a 5 -->
+</div></div></section>
+<main class="miolo">
+<nav class="indice"><a href="#1-cursos-gratuitos-da-anthropic">Cursos gratuitos da Anthropic</a><a href="#2-exemplos-prontos-por-area">Exemplos prontos por área</a><a href="#3-plugins-prontos-para-o-seu-trabalho">Plugins prontos para o seu trabalho</a><a href="#4-skills-prontas-e-como-criar-as-suas">Skills prontas e como criar as suas</a><a href="#5-escrever-pedidos-melhores">Escrever pedidos melhores</a><a href="#6-para-acompanhar">Para acompanhar</a><a href="#7-para-quem-e-tecnico-ou-vai-trabalhar-com-a-ti">Para quem é técnico ou vai trabalhar com a TI</a></nav>
+<section class="cat" id="1-cursos-gratuitos-da-anthropic"><div class="rotulo"><b>//</b> 01 · cursos gratuitos da anthropic · 5 itens</div><h2>Cursos gratuitos da Anthropic</h2><p class="desc">Cursos curtos, em inglês, com selo de conclusão. É o caminho mais seguro para continuar.</p><div class="grade"><article class="item" id="claude-101">
+  <div class="cab"><div><div class="n">Claude 101</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Curso gratuito que vai da primeira conversa com o Claude até projetos, skills e conectores, com casos de uso por área.</p>
+  <p class="campo"><b>Para quem</b>Qualquer pessoa que usa o Claude no trabalho.</p>
+  <p class="campo"><b>Como usar</b>Abra o link, entre com a sua conta Claude e siga as aulas. São 13 aulas, cerca de 2h30, com selo de conclusão.</p>
+  <a class="ir" href="https://academy.claude.com/courses/claude-101" target="_blank" rel="noopener">abrir ↗ academy.claude.com/courses/claude-101</a>
+</article>
+<article class="item" id="introduction-to-claude-cowork">
+  <div class="cab"><div><div class="n">Introduction to Claude Cowork</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Curso gratuito sobre como entregar trabalho de várias etapas ao Cowork: projetos, instruções, skills, plugins e como trabalhar com segurança.</p>
+  <p class="campo"><b>Para quem</b>Quem passa o dia movendo informação entre arquivos, planilhas e ferramentas.</p>
+  <p class="campo"><b>Como usar</b>14 aulas, cerca de 2h30. Faça com o Cowork aberto ao lado e repita cada aula no seu projeto.</p>
+  <a class="ir" href="https://academy.claude.com/courses/introduction-to-claude-cowork" target="_blank" rel="noopener">abrir ↗ academy.claude.com/courses/introduction-to-claude-cowork</a>
+</article>
+<article class="item" id="ai-fluency-framework-and-foundations">
+  <div class="cab"><div><div class="n">AI Fluency: Framework and foundations</div><div class="autor">Anthropic, com os professores Rick Dakan e Joseph Feller</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Curso gratuito sobre como trabalhar bem com IA: o que delegar, como descrever o pedido, como avaliar o resultado e como usar com responsabilidade.</p>
+  <p class="campo"><b>Para quem</b>Qualquer área, principalmente quem vai decidir onde a IA entra no trabalho da equipe.</p>
+  <p class="campo"><b>Como usar</b>14 aulas, cerca de 4 horas, com selo de conclusão. Não precisa do Cowork aberto.</p>
+  <a class="ir" href="https://academy.claude.com/courses/ai-fluency-framework-foundations" target="_blank" rel="noopener">abrir ↗ academy.claude.com/courses/ai-fluency-framework-foundations</a>
+</article>
+<article class="item" id="ai-capabilities-and-limitations">
+  <div class="cab"><div><div class="n">AI capabilities and limitations</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Curso gratuito sobre o que os modelos de IA fazem bem, onde erram e por quê.</p>
+  <p class="campo"><b>Para quem</b>Quem precisa confiar no resultado da IA para decidir, conferir ou assinar.</p>
+  <p class="campo"><b>Como usar</b>13 aulas, cerca de 3h30. Bom para fazer depois do Claude 101.</p>
+  <a class="ir" href="https://academy.claude.com/courses/ai-capabilities-and-limitations" target="_blank" rel="noopener">abrir ↗ academy.claude.com/courses/ai-capabilities-and-limitations</a>
+</article>
+<article class="item" id="building-effective-human-agent-teams-beta">
+  <div class="cab"><div><div class="n">Building effective human-agent teams (beta)</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Curso curto, ainda em versão de teste, sobre como organizar o trabalho de uma equipe que divide tarefas com agentes de IA.</p>
+  <p class="campo"><b>Para quem</b>Gestores e quem vai levar o que aprendeu no workshop para a equipe.</p>
+  <p class="campo"><b>Como usar</b>5 aulas, cerca de 45 minutos.</p>
+  <a class="ir" href="https://academy.claude.com/courses/building-effective-human-agent-teams" target="_blank" rel="noopener">abrir ↗ academy.claude.com/courses/building-effective-human-agent-teams</a>
+</article></div></section>
+<section class="cat" id="2-exemplos-prontos-por-area"><div class="rotulo"><b>//</b> 02 · exemplos prontos por área · 2 itens</div><h2>Exemplos prontos por área</h2><p class="desc">Ver como outras pessoas da sua área usam o Claude, para copiar e adaptar.</p><div class="grade"><article class="item" id="casos-de-uso-da-claude-academy">
+  <div class="cab"><div><div class="n">Casos de uso da Claude Academy</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Exemplos práticos de uso do Claude e do Cowork, filtrados por área: financeiro, jurídico, vendas, RH, operações e outras.</p>
+  <p class="campo"><b>Para quem</b>Quem quer ver o que outras pessoas da mesma área já fazem, passo a passo.</p>
+  <p class="campo"><b>Como usar</b>Filtre pela sua área e escolha um exemplo de 10 a 15 minutos para repetir no Cowork com os seus arquivos.</p>
+  <a class="ir" href="https://academy.claude.com/use-cases" target="_blank" rel="noopener">abrir ↗ academy.claude.com/use-cases</a>
+</article>
+<article class="item" id="how-i-ai">
+  <div class="cab"><div><div class="n">How I AI</div><div class="autor">Claire Vo, no Lenny&#x27;s Newsletter</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Série em vídeo e texto em que profissionais mostram, com a tela aberta, como usam IA no trabalho, com prompts e fluxos para copiar.</p>
+  <p class="campo"><b>Para quem</b>Quem aprende vendo alguém fazer. Em inglês.</p>
+  <p class="campo"><b>Como usar</b>Escolha um episódio da sua área e tente reproduzir o fluxo no Cowork.</p>
+  <a class="ir" href="https://www.lennysnewsletter.com/s/how-i-ai" target="_blank" rel="noopener">abrir ↗ lennysnewsletter.com/s/how-i-ai</a>
+</article></div></section>
+<section class="cat" id="3-plugins-prontos-para-o-seu-trabalho"><div class="rotulo"><b>//</b> 03 · plugins prontos para o seu trabalho · 7 itens</div><h2>Plugins prontos para o seu trabalho</h2><p class="desc">Pacotes com skills e conexões feitos para uma função. Instale, teste com um caso e ajuste ao jeito da empresa.</p><div class="grade"><article class="item" id="plugins-de-trabalho-do-conhecimento-anthropic">
+  <div class="cab"><div><div class="n">Plugins de trabalho do conhecimento (Anthropic)</div><div class="autor">Anthropic</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Coleção oficial e aberta de plugins para o Cowork, um por função: produtividade, vendas, atendimento, produto, marketing, jurídico, financeiro, dados, busca na empresa e criação de plugins.</p>
+  <p class="campo"><b>Para quem</b>Quem quer um ponto de partida pronto para a própria área e depois ajustar ao jeito da empresa.</p>
+  <p class="campo"><b>Como usar</b>No Cowork, abra Customize, depois Plugins, e procure pelo nome da área. Também dá para adicionar o repositório como marketplace colando o endereço do GitHub.</p>
+  <a class="ir" href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/knowledge-work-plugins</a>
+</article>
+<article class="item" id="plugin-de-financas-finance">
+  <div class="cab"><div><div class="n">Plugin de finanças (finance)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Plugin para fechamento do mês, lançamentos, conciliação de contas, demonstrativos e análise de variação.</p>
+  <p class="campo"><b>Para quem</b>Financeiro, contabilidade e controladoria.</p>
+  <p class="campo"><b>Como usar</b>Instale pelo Customize, depois Plugins, no Cowork. Ajuste as instruções ao plano de contas da empresa antes de confiar no resultado.</p>
+  <a class="ir" href="https://github.com/anthropics/knowledge-work-plugins/tree/main/finance" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/knowledge-work-plugins/tree/main/finance</a>
+</article>
+<article class="item" id="plugin-juridico-legal">
+  <div class="cab"><div><div class="n">Plugin jurídico (legal)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Plugin para jurídico interno: revisão de contratos, triagem de acordos de confidencialidade, apoio em conformidade e respostas padrão.</p>
+  <p class="campo"><b>Para quem</b>Jurídico e quem lida com contratos.</p>
+  <p class="campo"><b>Como usar</b>Instale pelo Customize, depois Plugins, no Cowork. Todo resultado passa pela revisão de quem responde pelo contrato.</p>
+  <a class="ir" href="https://github.com/anthropics/knowledge-work-plugins/tree/main/legal" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/knowledge-work-plugins/tree/main/legal</a>
+</article>
+<article class="item" id="plugin-de-vendas-sales">
+  <div class="cab"><div><div class="n">Plugin de vendas (sales)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Plugin para pesquisar clientes, preparar reuniões, revisar a carteira de oportunidades e escrever abordagens.</p>
+  <p class="campo"><b>Para quem</b>Comercial e atendimento a clientes.</p>
+  <p class="campo"><b>Como usar</b>Instale pelo Customize, depois Plugins, no Cowork. Rende mais com o conector do CRM ligado, o que costuma depender da TI.</p>
+  <a class="ir" href="https://github.com/anthropics/knowledge-work-plugins/tree/main/sales" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/knowledge-work-plugins/tree/main/sales</a>
+</article>
+<article class="item" id="plugin-de-produtividade-productivity">
+  <div class="cab"><div><div class="n">Plugin de produtividade (productivity)</div><div class="autor">Anthropic</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Plugin para organizar tarefas, agenda e a rotina do dia, com o contexto pessoal de quem usa.</p>
+  <p class="campo"><b>Para quem</b>Qualquer área, principalmente quem vive entre reuniões e e-mails.</p>
+  <p class="campo"><b>Como usar</b>Instale pelo Customize, depois Plugins, no Cowork. Rende mais com e-mail e agenda conectados.</p>
+  <a class="ir" href="https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/knowledge-work-plugins/tree/main/productivity</a>
+</article>
+<article class="item" id="claude-para-servicos-financeiros-anthropic">
+  <div class="cab"><div><div class="n">Claude para serviços financeiros (Anthropic)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Agentes e skills oficiais para trabalho financeiro pesado: modelos em Excel, conciliação contábil, fechamento do mês, análise de resultados e cadastro de clientes.</p>
+  <p class="campo"><b>Para quem</b>Finanças corporativas, controladoria e mercado financeiro.</p>
+  <p class="campo"><b>Como usar</b>No Cowork, adicione o plugin colando o endereço do repositório na tela de plugins e escolha os agentes que quer, ou envie o zip de uma das pastas.</p>
+  <a class="ir" href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/financial-services</a>
+</article>
+<article class="item" id="marketplace-de-plugins-do-claude">
+  <div class="cab"><div><div class="n">Marketplace de plugins do Claude</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Vitrine oficial com centenas de plugins do Claude e do Claude Code, de parceiros e da Anthropic.</p>
+  <p class="campo"><b>Para quem</b>Quem quer ligar o Claude a uma ferramenta que já usa.</p>
+  <p class="campo"><b>Como usar</b>Procure pela ferramenta da sua empresa. Antes de instalar, confira quem publicou; plugin com conector pode precisar de liberação da TI.</p>
+  <a class="ir" href="https://claude.com/marketplace/plugins" target="_blank" rel="noopener">abrir ↗ claude.com/marketplace/plugins</a>
+</article></div></section>
+<section class="cat" id="4-skills-prontas-e-como-criar-as-suas"><div class="rotulo"><b>//</b> 04 · skills prontas e como criar as suas · 6 itens</div><h2>Skills prontas e como criar as suas</h2><p class="desc">Para transformar mais trabalhos que se repetem em receitas que o Claude segue sozinho.</p><div class="grade"><article class="item" id="repositorio-oficial-de-skills-da-anthropic">
+  <div class="cab"><div><div class="n">Repositório oficial de skills da Anthropic</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">As skills de exemplo da Anthropic, incluindo as que criam Word, Excel, PowerPoint e PDF, a de identidade visual e a skill-creator.</p>
+  <p class="campo"><b>Para quem</b>Quem quer ver como uma skill boa é escrita antes de fazer a sua.</p>
+  <p class="campo"><b>Como usar</b>Abra a pasta de uma skill e leia o SKILL.md. Para usar uma delas, envie a pasta em zip pelo Customize, depois Skills.</p>
+  <a class="ir" href="https://github.com/anthropics/skills" target="_blank" rel="noopener">abrir ↗ github.com/anthropics/skills</a>
+</article>
+<article class="item" id="usar-skills-no-claude-central-de-ajuda">
+  <div class="cab"><div><div class="n">Usar skills no Claude (central de ajuda)</div><div class="autor">Anthropic</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">O guia oficial de como ligar, encontrar e chamar skills no Claude e no Cowork.</p>
+  <p class="campo"><b>Para quem</b>Quem quer usar melhor as skills que já tem.</p>
+  <p class="campo"><b>Como usar</b>Leitura de 5 minutos. Mostra onde ficam as skills (Customize, depois Skills) e como chamá-las com a barra.</p>
+  <a class="ir" href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" target="_blank" rel="noopener">abrir ↗ support.claude.com/en/articles/12512180-use-skills-in-claude</a>
+</article>
+<article class="item" id="criar-uma-skill-conversando-com-o-claude">
+  <div class="cab"><div><div class="n">Criar uma skill conversando com o Claude</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Tutorial curto de como transformar um trabalho que funcionou numa skill, só descrevendo o processo para o Claude.</p>
+  <p class="campo"><b>Para quem</b>Quem quer criar a segunda, a terceira skill sem ajuda.</p>
+  <p class="campo"><b>Como usar</b>Siga o tutorial numa conversa nova do Cowork, com o trabalho que você quer repetir.</p>
+  <a class="ir" href="https://academy.claude.com/tutorials/how-to-create-a-skill-with-claude-through-conversation" target="_blank" rel="noopener">abrir ↗ academy.claude.com/tutorials/how-to-create-a-skill-with-claude-through-conversation</a>
+</article>
+<article class="item" id="montar-um-plugin-do-zero-no-cowork">
+  <div class="cab"><div><div class="n">Montar um plugin do zero no Cowork</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Tutorial de como juntar skills e conectores num plugin para usar e compartilhar com a equipe.</p>
+  <p class="campo"><b>Para quem</b>Quem já tem duas ou mais skills e quer entregar tudo junto para a área.</p>
+  <p class="campo"><b>Como usar</b>Siga o tutorial no Cowork. No plano Team, peça a quem administra a conta para distribuir o plugin para a equipe.</p>
+  <a class="ir" href="https://academy.claude.com/tutorials/how-to-build-a-plugin-from-scratch-in-cowork" target="_blank" rel="noopener">abrir ↗ academy.claude.com/tutorials/how-to-build-a-plugin-from-scratch-in-cowork</a>
+</article>
+<article class="item" id="ajustar-um-plugin-pronto-no-cowork">
+  <div class="cab"><div><div class="n">Ajustar um plugin pronto no Cowork</div><div class="autor">Anthropic (Claude Academy)</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Tutorial de como adaptar um plugin pronto (por exemplo, o de finanças ou o jurídico) às ferramentas e ao jeito da sua empresa.</p>
+  <p class="campo"><b>Para quem</b>Quem instalou um plugin por área e quer que ele fale a língua da empresa.</p>
+  <p class="campo"><b>Como usar</b>Faça depois de instalar um dos plugins da seção 3.</p>
+  <a class="ir" href="https://academy.claude.com/tutorials/how-to-customize-plugins-in-cowork" target="_blank" rel="noopener">abrir ↗ academy.claude.com/tutorials/how-to-customize-plugins-in-cowork</a>
+</article>
+<article class="item" id="guia-completo-para-criar-skills-pdf">
+  <div class="cab"><div><div class="n">Guia completo para criar skills (PDF)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Guia em PDF, de 33 páginas, sobre como planejar, escrever, testar e compartilhar skills, com exemplos e soluções para problemas comuns.</p>
+  <p class="campo"><b>Para quem</b>Quem vai criar skills para a equipe inteira usar.</p>
+  <p class="campo"><b>Como usar</b>Leia com calma e use como checklist antes de compartilhar uma skill.</p>
+  <a class="ir" href="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf" target="_blank" rel="noopener">abrir ↗ resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf</a>
+</article></div></section>
+<section class="cat" id="5-escrever-pedidos-melhores"><div class="rotulo"><b>//</b> 05 · escrever pedidos melhores · 1 itens</div><h2>Escrever pedidos melhores</h2><p class="desc">Instruções mais claras dão resultados mais estáveis.</p><div class="grade"><article class="item" id="boas-praticas-de-prompt-documentacao-do-claude">
+  <div class="cab"><div><div class="n">Boas práticas de prompt (documentação do Claude)</div><div class="autor">Anthropic</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">O guia oficial de como escrever pedidos claros para o Claude: contexto, exemplos, formato e como pedir para ele pensar antes de responder.</p>
+  <p class="campo"><b>Para quem</b>Quem escreve instruções de projeto e skills e quer resultado mais estável.</p>
+  <p class="campo"><b>Como usar</b>Leia uma seção por vez e teste a dica no seu próprio projeto. Parte do texto fala com quem programa; pule os trechos de código.</p>
+  <a class="ir" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">abrir ↗ platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices</a>
+</article></div></section>
+<section class="cat" id="6-para-acompanhar"><div class="rotulo"><b>//</b> 06 · para acompanhar · 2 itens</div><h2>Para acompanhar</h2><p class="desc">Para saber o que muda, sem precisar procurar.</p><div class="grade"><article class="item" id="one-useful-thing">
+  <div class="cab"><div><div class="n">One Useful Thing</div><div class="autor">Ethan Mollick, professor da Wharton</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Newsletter gratuita sobre o que a IA muda no trabalho, na educação e na gestão, escrita para quem não é técnico.</p>
+  <p class="campo"><b>Para quem</b>Gestores e quem quer entender para onde a IA está indo. Em inglês.</p>
+  <p class="campo"><b>Como usar</b>Assine e leia um texto por semana.</p>
+  <a class="ir" href="https://www.oneusefulthing.org/" target="_blank" rel="noopener">abrir ↗ oneusefulthing.org/</a>
+</article>
+<article class="item" id="blog-do-claude">
+  <div class="cab"><div><div class="n">Blog do Claude</div><div class="autor">Anthropic</div></div><span class="nivel comecando">começando</span></div>
+  <p class="o">Onde a Anthropic anuncia o que há de novo no Claude, no Cowork e nos plugins.</p>
+  <p class="campo"><b>Para quem</b>Quem quer saber das novidades antes de todo mundo.</p>
+  <p class="campo"><b>Como usar</b>Passe o olho uma vez por mês.</p>
+  <a class="ir" href="https://claude.com/blog" target="_blank" rel="noopener">abrir ↗ claude.com/blog</a>
+</article></div></section>
+<section class="cat" id="7-para-quem-e-tecnico-ou-vai-trabalhar-com-a-ti"><div class="rotulo"><b>//</b> 07 · para quem é técnico ou vai trabalhar com a ti · 5 itens</div><h2>Para quem é técnico ou vai trabalhar com a TI</h2><p class="desc">Referências muito boas, mas feitas para quem programa. Vale conhecer para conversar com a TI.</p><div class="grade"><article class="item" id="skills-do-matt-pocock">
+  <div class="cab"><div><div class="n">Skills do Matt Pocock</div><div class="autor">Matt Pocock</div></div><span class="nivel tecnico">técnico</span></div>
+  <p class="o">Coleção muito usada de skills de um educador de programação, tiradas do dia a dia dele: planejar, investigar bugs, revisar código e passar o trabalho adiante.</p>
+  <p class="campo"><b>Para quem</b>Desenvolvedores. A skill grill-me (o Claude te entrevista até o plano ficar claro) serve para qualquer pessoa que planeja.</p>
+  <p class="campo"><b>Como usar</b>Feita para o Claude Code e outros agentes de programação; a instalação é por linha de comando. Leve para a TI se a sua equipe programa.</p>
+  <a class="ir" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">abrir ↗ github.com/mattpocock/skills</a>
+</article>
+<article class="item" id="gstack-do-garry-tan">
+  <div class="cab"><div><div class="n">gstack, do Garry Tan</div><div class="autor">Garry Tan, presidente da Y Combinator</div></div><span class="nivel tecnico">técnico</span></div>
+  <p class="o">A configuração que o Garry Tan usa no Claude Code: um conjunto de skills que funcionam como uma equipe de produto e engenharia (revisão de estratégia, de design, testes, segurança e lançamento).</p>
+  <p class="campo"><b>Para quem</b>Desenvolvedores e fundadores que constroem software. A skill office-hours, que questiona uma ideia de produto antes de construir, interessa também a gestores.</p>
+  <p class="campo"><b>Como usar</b>Só no Claude Code, com instalação por linha de comando. Não roda no Cowork.</p>
+  <a class="ir" href="https://github.com/garrytan/gstack" target="_blank" rel="noopener">abrir ↗ github.com/garrytan/gstack</a>
+</article>
+<article class="item" id="superpowers">
+  <div class="cab"><div><div class="n">Superpowers</div><div class="autor">Jesse Vincent (obra)</div></div><span class="nivel tecnico">técnico</span></div>
+  <p class="o">Um método de desenvolvimento de software com agentes, empacotado em skills que o Claude segue sozinho.</p>
+  <p class="campo"><b>Para quem</b>Desenvolvedores.</p>
+  <p class="campo"><b>Como usar</b>Plugin para o Claude Code, instalado pela lista oficial de plugins.</p>
+  <a class="ir" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">abrir ↗ github.com/obra/superpowers</a>
+</article>
+<article class="item" id="awesome-claude-skills">
+  <div class="cab"><div><div class="n">Awesome Claude Skills</div><div class="autor">Composio</div></div><span class="nivel intermediario">intermediário</span></div>
+  <p class="o">Uma lista grande, mantida pela comunidade, de skills e plugins para o Claude, organizada por categoria (documentos, negócios, produtividade, dados).</p>
+  <p class="campo"><b>Para quem</b>Quem quer procurar uma skill pronta antes de criar. A qualidade varia: confira quem publicou antes de instalar.</p>
+  <p class="campo"><b>Como usar</b>Procure pela categoria, abra a skill, leia o SKILL.md e só então envie pelo Customize, depois Skills.</p>
+  <a class="ir" href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank" rel="noopener">abrir ↗ github.com/ComposioHQ/awesome-claude-skills</a>
+</article>
+<article class="item" id="documentacao-de-skills-do-claude-code">
+  <div class="cab"><div><div class="n">Documentação de skills do Claude Code</div><div class="autor">Anthropic</div></div><span class="nivel tecnico">técnico</span></div>
+  <p class="o">A referência técnica de como uma skill é montada: arquivos, campos, variáveis e como ela é chamada.</p>
+  <p class="campo"><b>Para quem</b>Quem programa ou vai montar skills e plugins para a empresa com a TI.</p>
+  <p class="campo"><b>Como usar</b>Consulta, não leitura corrida.</p>
+  <a class="ir" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">abrir ↗ code.claude.com/docs/en/skills</a>
+</article></div></section>
+</main>
+<footer class="rodape"><div class="miolo"><div class="logo">rvrt<span>_</span></div>Referências selecionadas pela rvrt para quem participou do workshop Ignite. Todos os links foram abertos e conferidos antes de entrar nesta lista. Quase tudo está em inglês; o navegador traduz a página se você pedir.</div></footer>
+</body></html>
