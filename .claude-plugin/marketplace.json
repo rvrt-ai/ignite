@@ -1,0 +1,12 @@
+{
+  "name": "rvrt",
+  "description": "Plugins da rvrt para os workshops Ignite",
+  "owner": { "name": "rvrt" },
+  "plugins": [
+    {
+      "name": "ignite",
+      "source": ".",
+      "description": "Assistente dos workshops Ignite da rvrt: conduz cada participante do primeiro contato à verificação do projeto."
+    }
+  ]
+}
